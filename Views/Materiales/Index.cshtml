@@ -1,7 +1,14 @@
 ﻿@model List<ProyectoFinalPA.Models.Material>
 
 <h2>Lista de materiales reservados</h2>
-<a asp-action="Crear" class="btn btn-primary">RESERVAR</a>
+@{
+    var rol = Context.Session.GetString("UsuarioRol");
+}
+
+@if (rol == "Docente")
+{
+    <a asp-action="Crear" class="btn btn-primary mb-3">RESERVAR</a>
+}
 
 @if (Model.Any())
 {

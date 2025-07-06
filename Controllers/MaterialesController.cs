@@ -8,7 +8,12 @@ namespace ProyectoFinalPA.Controllers
 {
     public class MaterialesController : Controller
     {
-        private readonly string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "AppData", "materiales.txt");
+        private readonly ApplicationDbContext _context;
+
+        public MaterialesController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult Index()
         {
@@ -18,12 +23,22 @@ namespace ProyectoFinalPA.Controllers
 
         public IActionResult Crear()
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso restringido solo para docentes.";
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
         [HttpPost]
         public IActionResult Crear(Material material)
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso restringido solo para docentes.";
+                return RedirectToAction("Index", "Home");
+            }
             if (ModelState.IsValid)
             {
                 GuardarMaterial(material);

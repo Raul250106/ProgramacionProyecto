@@ -1,7 +1,14 @@
 ﻿@model List<ProyectoFinalPA.Models.Tutoria>
 
 <h2>Lista de tutorías</h2>
-<a asp-action="Crear" class="btn btn-primary">Agregar tutoría</a>
+@{
+    var rol = Context.Session.GetString("UsuarioRol");
+}
+
+@if (rol == "Docente")
+{
+    <a asp-action="Crear" class="btn btn-primary mb-3">AGREGAR TUTORIA</a>
+}
 
 @if (Model.Any())
 {

@@ -1,8 +1,14 @@
 ﻿@model List<ProyectoFinalPA.Models.Clase>
 
 <h2>Lista de clases</h2>
-<a asp-action="Crear" class="btn btn-primary">Agregar clase</a>
+@{
+    var rol = Context.Session.GetString("UsuarioRol");
+}
 
+@if (rol == "Docente")
+{
+    <a asp-action="Crear" class="btn btn-primary mb-3">AGREGAR CLASE</a>
+}
 @if (Model.Any())
 {
     <table class="table">

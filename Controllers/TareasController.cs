@@ -8,8 +8,12 @@ namespace ProyectoFinalPA.Controllers
 {
     public class TareasController : Controller
     {
-        private readonly string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "AppData", "tareas.txt");
+        private readonly ApplicationDbContext _context;
 
+        public TareasController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             var tareas = LeerTareas();
@@ -18,12 +22,22 @@ namespace ProyectoFinalPA.Controllers
 
         public IActionResult Crear()
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso restringido solo para docentes.";
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
         [HttpPost]
         public IActionResult Crear(Tarea tarea)
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso restringido solo para docentes.";
+                return RedirectToAction("Index", "Home");
+            }
             if (ModelState.IsValid)
             {
                 GuardarTarea(tarea);

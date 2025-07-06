@@ -8,7 +8,12 @@ namespace ProyectoFinalPA.Controllers
 {
     public class TutoriasController : Controller
     {
-        private readonly string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "AppData", "tutorias.txt");
+        private readonly ApplicationDbContext _context;
+
+        public TutoriasController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult Index()
         {
@@ -18,12 +23,22 @@ namespace ProyectoFinalPA.Controllers
 
         public IActionResult Crear()
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso negado";
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
         [HttpPost]
         public IActionResult Crear(Tutoria tutoria)
         {
+            if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
+            {
+                TempData["Error"] = "Acceso negado";
+                return RedirectToAction("Index", "Home");
+            }
             if (ModelState.IsValid)
             {
                 GuardarTutoriaEnArchivo(tutoria);

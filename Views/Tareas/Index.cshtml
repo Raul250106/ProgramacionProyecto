@@ -1,7 +1,15 @@
 ﻿@model List<ProyectoFinalPA.Models.Tarea>
 
 <h2>Lista de tareas</h2>
-<a asp-action="Crear" class="btn btn-primary">Agregar tarea</a>
+@{
+    var rol = Context.Session.GetString("UsuarioRol");
+}
+
+@if (rol == "Docente")
+{
+    <a asp-action="Crear" class="btn btn-primary mb-3">AGREGAR TAREA</a>
+}
+
 
 @if (Model.Any())
 {
