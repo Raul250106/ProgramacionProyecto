@@ -1,0 +1,13 @@
+﻿@{
+    var nombre = Context.Session.GetString("UsuarioNombre");
+    var rol = Context.Session.GetString("UsuarioRol");
+}
+
+@if (!string.IsNullOrEmpty(nombre))
+{
+    <div class="text-end me-4 mt-2">
+        <span class="fw-bold">Bienvenido, @nombre</span> <span class="text-muted">(@rol)</span>
+        |
+        <a asp-controller="Usuarios" asp-action="Logout" class="text-danger">Cerrar sesión</a>
+    </div>
+}

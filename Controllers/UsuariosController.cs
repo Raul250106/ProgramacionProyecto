@@ -44,6 +44,26 @@ namespace ProyectoFinalPA.Controllers
             return View(model);
         }
 
+        // GET: Usuarios/Registrar
+        public IActionResult Registrar()
+        {
+            return View();
+        }
+
+        // POST: Usuarios/Registrar
+        [HttpPost]
+        public IActionResult Registrar(Usuario nuevoUsuario)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Usuarios.Add(nuevoUsuario);
+                _context.SaveChanges();
+                return RedirectToAction("Login");
+            }
+
+            return View(nuevoUsuario);
+        }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
