@@ -16,15 +16,15 @@ namespace ProyectoFinalPA.Controllers
         }
         public IActionResult Index()
         {
-            var tareas = LeerTareas();
-            return View(tareas);
+            var tarea = _context.Tareas.ToList();
+            return View(tarea);
         }
 
         public IActionResult Crear()
         {
             if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
             {
-                TempData["Error"] = "Acceso restringido solo para docentes.";
+                TempData["Error"] = "Acceso negado";
                 return RedirectToAction("Index", "Home");
             }
             return View();
@@ -35,48 +35,16 @@ namespace ProyectoFinalPA.Controllers
         {
             if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
             {
-                TempData["Error"] = "Acceso restringido solo para docentes.";
+                TempData["Error"] = "Acceso negado";
                 return RedirectToAction("Index", "Home");
             }
             if (ModelState.IsValid)
             {
-                GuardarTarea(tarea);
+                _context.Tareas.Add(tarea);
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(tarea);
-        }
-
-        private List<Tarea> LeerTareas()
-        {
-            var lista = new List<Tarea>();
-            if (System.IO.File.Exists(rutaArchivo))
-            {
-                var lineas = System.IO.File.ReadAllLines(rutaArchivo);
-                foreach (var linea in lineas)
-                {
-                    var datos = linea.Split(',');
-                    lista.Add(new Tarea
-                    {
-                        Id = int.Parse(datos[0]),
-                        Descripcion = datos[1],
-                        Materia = datos[2],
-                        FechaEntrega = DateTime.Parse(datos[3])
-                    });
-                }
-            }
-            return lista;
-        }
-
-        private void GuardarTarea(Tarea tarea)
-        {
-            var tareas = LeerTareas();
-            int nuevoId = tareas.Any() ? tareas.Max(x => x.Id) + 1 : 1;
-            tarea.Id = nuevoId;
-
-            using (var sw = System.IO.File.AppendText(rutaArchivo))
-            {
-                sw.WriteLine($"{tarea.Id},{tarea.Descripcion},{tarea.Materia},{tarea.FechaEntrega:yyyy-MM-dd}");
-            }
         }
     }
 }

@@ -17,8 +17,8 @@ namespace ProyectoFinalPA.Controllers
 
         public IActionResult Index()
         {
-            var tutorias = LeerTutoriasDesdeArchivo();
-            return View(tutorias);
+            var tutoria = _context.Tutorias.ToList();
+            return View(tutoria);
         }
 
         public IActionResult Crear()
@@ -41,43 +41,11 @@ namespace ProyectoFinalPA.Controllers
             }
             if (ModelState.IsValid)
             {
-                GuardarTutoriaEnArchivo(tutoria);
+                _context.Tutorias.Add(tutoria);
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(tutoria);
-        }
-
-        private List<Tutoria> LeerTutoriasDesdeArchivo()
-        {
-            var lista = new List<Tutoria>();
-            if (System.IO.File.Exists(rutaArchivo))
-            {
-                var lineas = System.IO.File.ReadAllLines(rutaArchivo);
-                foreach (var linea in lineas)
-                {
-                    var datos = linea.Split(',');
-                    lista.Add(new Tutoria
-                    {
-                        Id = int.Parse(datos[0]),
-                        Tema = datos[1],
-                        Tutor = datos[2],
-                        Fecha = DateTime.Parse(datos[3])
-                    });
-                }
-            }
-            return lista;
-        }
-
-        private void GuardarTutoriaEnArchivo(Tutoria tutoria)
-        {
-            var tutorias = LeerTutoriasDesdeArchivo();
-            int nuevoId = tutorias.Any() ? tutorias.Max(t => t.Id) + 1 : 1;
-            tutoria.Id = nuevoId;
-
-            using (var sw = System.IO.File.AppendText(rutaArchivo))
-            {
-                sw.WriteLine($"{tutoria.Id},{tutoria.Tema},{tutoria.Tutor},{tutoria.Fecha:yyyy-MM-dd}");
-            }
         }
     }
 }
