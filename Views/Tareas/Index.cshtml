@@ -1,0 +1,31 @@
+﻿@model List<ProyectoFinalPA.Models.Tarea>
+
+<h2>Lista de tareas</h2>
+<a asp-action="Crear" class="btn btn-primary">Agregar tarea</a>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Materia</th>
+                <th>Fecha de Entrega</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Materia</td>
+                    <td>@item.FechaEntrega.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas registradas.</p>
+}

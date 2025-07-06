@@ -1,0 +1,24 @@
+﻿@model ProyectoFinalPA.Models.Tarea
+
+<h2>Agregar tarea</h2>
+
+<form asp-action="Crear" method="post">
+    <div>
+        <label>Descripción:</label>
+        <input asp-for="Descripcion" />
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Materia:</label>
+        <input asp-for="Materia" />
+        <span asp-validation-for="Materia" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Fecha de Entrega:</label>
+        <input asp-for="FechaEntrega" type="date" />
+        <span asp-validation-for="FechaEntrega" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+<a asp-action="Index">Volver</a>
+

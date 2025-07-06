@@ -1,0 +1,31 @@
+﻿@model List<ProyectoFinalPA.Models.Material>
+
+<h2>Lista de materiales reservados</h2>
+<a asp-action="Crear" class="btn btn-primary">RESERVAR</a>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Material</th>
+                <th>Solicitante</th>
+                <th>Fecha de Reserva</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Solicitante</td>
+                    <td>@item.FechaReserva.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay materiales reservados.</p>
+}

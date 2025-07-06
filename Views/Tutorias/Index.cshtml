@@ -1,0 +1,31 @@
+﻿@model List<ProyectoFinalPA.Models.Tutoria>
+
+<h2>Lista de tutorías</h2>
+<a asp-action="Crear" class="btn btn-primary">Agregar tutoría</a>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tema</th>
+                <th>Tutor</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Tema</td>
+                    <td>@item.Tutor</td>
+                    <td>@item.Fecha.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tutorías registradas.</p>
+}

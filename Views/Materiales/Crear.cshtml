@@ -1,0 +1,23 @@
+﻿@model ProyectoFinalPA.Models.Material
+
+<h2>Agregar reserva de material</h2>
+
+<form asp-action="Crear" method="post">
+    <div>
+        <label>Nombre del Material:</label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Solicitante:</label>
+        <input asp-for="Solicitante" />
+        <span asp-validation-for="Solicitante" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Fecha de Reserva:</label>
+        <input asp-for="FechaReserva" type="date" />
+        <span asp-validation-for="FechaReserva" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+<a asp-action="Index">Volver</a>

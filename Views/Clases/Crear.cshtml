@@ -1,0 +1,23 @@
+﻿@model ProyectoFinalPA.Models.Clase
+
+<h2>Agregar clase</h2>
+
+<form asp-action="Crear" method="post">
+    <div>
+        <label>Materia:</label>
+        <input asp-for="Materia" />
+        <span asp-validation-for="Materia" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Docente:</label>
+        <input asp-for="Docente" />
+        <span asp-validation-for="Docente" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Duración (minutos):</label>
+        <input asp-for="DuracionMinutos" />
+        <span asp-validation-for="DuracionMinutos" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+<a asp-action="Index">Volver</a>

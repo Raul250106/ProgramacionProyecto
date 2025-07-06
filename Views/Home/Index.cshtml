@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+<h2 class="text-center fs-1 text-info">BIENVENIDOS A AULAGESTIÓN</h2>
+<p class="text-center fs-4 text-info">Seleccione la opción deseada</p>
+
+<div class="d-flex flex-column align-items-center gap-5">
+    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Tareas" asp-action="Index">Tareas</a>
+    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Materiales" asp-action="Index">Materiales</a>
+    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Clases" asp-action="Index">Clases</a>
+</div>

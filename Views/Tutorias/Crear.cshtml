@@ -1,0 +1,23 @@
+﻿@model ProyectoFinalPA.Models.Tutoria
+
+<h2>Agregar tutoría</h2>
+
+<form asp-action="Crear" method="post">
+    <div>
+        <label>Tema:</label>
+        <input asp-for="Tema" />
+        <span asp-validation-for="Tema" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Tutor:</label>
+        <input asp-for="Tutor" />
+        <span asp-validation-for="Tutor" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Fecha:</label>
+        <input asp-for="Fecha" type="date" />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+<a asp-action="Index">Volver</a>
