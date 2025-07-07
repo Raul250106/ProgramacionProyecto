@@ -1,5 +1,8 @@
 ﻿@model List<ProyectoFinalPA.Models.Tarea>
 
+@{
+    ViewData["Title"] = "Tareas - ";
+}
 <h2>Lista de tareas</h2>
 @{
     var rol = Context.Session.GetString("UsuarioRol");

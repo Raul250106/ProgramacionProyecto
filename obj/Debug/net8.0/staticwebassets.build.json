@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lVTRNgLolqSY6yDKf0A/MNGQQKggqVyKYh0qAMoxptc=",
+  "Hash": "elSF3lI9zsl5AJ/Y9gEhqi0K4U/XSPrHTq7Das+IRJM=",
   "Source": "ProyectoFinalPA",
   "BasePath": "_content/ProyectoFinalPA",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "SourceId": "ProyectoFinalPA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
+      "BasePath": "_content/ProyectoFinalPA",
+      "RelativePath": "Images/FONDO1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qi5dwyxzbv",
+      "Integrity": "zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\FONDO1.jpg"
     },
     {
       "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\js\\site.js",
@@ -1481,6 +1502,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/FONDO1.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73800"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/FONDO1.qi5dwyxzbv.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73800"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qi5dwyxzbv"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/FONDO1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
         }
       ]
     },

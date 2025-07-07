@@ -1,5 +1,8 @@
 ﻿@model List<ProyectoFinalPA.Models.Tutoria>
 
+@{
+    ViewData["Title"] = "Tutorias - ";
+}
 <h2>Lista de tutorías</h2>
 @{
     var rol = Context.Session.GetString("UsuarioRol");

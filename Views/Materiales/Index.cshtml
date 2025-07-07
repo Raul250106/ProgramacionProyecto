@@ -1,5 +1,7 @@
 ﻿@model List<ProyectoFinalPA.Models.Material>
-
+@{
+    ViewData["Title"] = "Materiales - ";
+}
 <h2>Lista de materiales reservados</h2>
 @{
     var rol = Context.Session.GetString("UsuarioRol");

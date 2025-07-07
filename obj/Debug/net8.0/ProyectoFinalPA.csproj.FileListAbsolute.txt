@@ -205,3 +205,4 @@ C:\Users\raull\OneDrive\Escritorio\ProyectoFinalPA - copia\obj\Debug\net8.0\Proy
 C:\Users\raull\OneDrive\Escritorio\ProyectoFinalPA - copia\obj\Debug\net8.0\ProyectoFinalPA.genruntimeconfig.cache
 C:\Users\raull\OneDrive\Escritorio\ProyectoFinalPA - copia\obj\Debug\net8.0\ref\ProyectoFinalPA.dll
 C:\Users\raull\OneDrive\Escritorio\ProyectoFinalPA - copia\obj\Debug\net8.0\ProyectoFinalPA.sourcelink.json
+C:\Users\raull\OneDrive\Escritorio\ProyectoFinalPA - copia\bin\Debug\net8.0\Newtonsoft.Json.dll
