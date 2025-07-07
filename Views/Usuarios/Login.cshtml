@@ -23,6 +23,13 @@
             height: 150px; /* Alto fijo o el que necesites */
         }
 
+        .fuente-titulos {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 5rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
         .formulario-login {
             width: 300px;
         }
@@ -58,13 +65,10 @@
 </body>
 </html>
 
-<form>
-    @*BOTON COLABORADORES*@
-    <a
-        class="btn btn-info" style="position: fixed; bottom: 20px; left: 20px;" 
-        asp-controller="Colaboradores" asp-action="Index">Ver colaboradores
-    </a>
-</form>
+<a class="btn btn-info" style="position: fixed; bottom: 15px; left: 20px; color: darkgreen; background-color: #e0f2f1; border: 2px solid darkgreen;"
+   asp-controller="Colaboradores" asp-action="Index">
+    Ver colaboradores
+</a>
 
 @section Scripts {
     @{
