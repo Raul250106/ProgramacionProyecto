@@ -2,12 +2,38 @@
     var nombre = Context.Session.GetString("UsuarioNombre");
     var rol = Context.Session.GetString("UsuarioRol");
 }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-@if (!string.IsNullOrEmpty(nombre))
-{
-    <div class="text-end me-4 mt-2">
-        <span class="fw-bold">Bienvenido, @nombre</span> <span class="text-muted">(@rol)</span>
-        |
-        <a asp-controller="Usuarios" asp-action="Logout" class="text-danger">Cerrar sesión</a>
-    </div>
-}
+        .der-pantalla {
+            position: fixed;
+            top: 2%;
+            right: 1%;
+            transform: translateX(1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    @if (!string.IsNullOrEmpty(nombre))
+    {
+        <div class="text-end me-4 mt-2 der-pantalla">
+            <span class="fw-bold">Bienvenido, @nombre</span> <span class="text-muted">(@rol)</span>
+            |
+            <a asp-controller="Usuarios" asp-action="Logout" class="text-danger">Cerrar sesión</a>
+        </div>
+    }
+</body>
+</html>
+
+

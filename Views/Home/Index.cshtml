@@ -1,12 +1,68 @@
 ﻿@{
     ViewData["Title"] = "Inicio - ";
 }
-<h2 class="text-center fs-1 text-info">BIENVENIDOS A AULAGESTIÓN</h2>
-<p class="text-center fs-4 text-info">Seleccione la opción deseada</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-<div class="d-flex flex-column align-items-center gap-5">
-    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
-    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Tareas" asp-action="Index">Tareas</a>
-    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Materiales" asp-action="Index">Materiales</a>
-    <a class="btn btn-info w-25 py-3 fs-3 text-light" asp-controller="Clases" asp-action="Index">Clases</a>
-</div>
+        .izq-pantalla {
+            position: fixed;
+            top: 2%;
+            left: 2%;
+            transform: translateX(-2%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fuente-letras {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .circulo {
+            background-color: white; /* fondo verde claro suave */
+            border: 2px solid darkgreen; /* borde verde oscuro */
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            padding: 18px; /* espacio interno */
+            color: darkgreen; /* texto verde oscuro */
+            font-family: 'Georgia', serif; /* fuente */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h2 class="izq-pantalla fuente-letras">Seleccione la opción deseada:</h2>
+        </div>
+    </header>
+
+    <div>
+        <a class="btn circulo" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+    </div>
+
+    <div>
+        <a class="btn circulo" asp-controller="Tareas" asp-action="Index">Tareas</a>
+    </div>
+
+    <div>
+        <a class="btn circulo" asp-controller="Materiales" asp-action="Index">Materiales</a>
+    </div>
+
+    <div>
+        <a class="btn circulo" asp-controller="Clases" asp-action="Index">Clases</a>
+    </div>
+</body>
+</html>
+
+
