@@ -29,7 +29,7 @@ Se crea una lista HTML no ordenada <ul> para mostrar los usuarios.
 
         .centro-titulo {
             position: fixed;
-            top: 5%;
+            top: 4%;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -38,19 +38,42 @@ Se crea una lista HTML no ordenada <ul> para mostrar los usuarios.
             width: 500px; /* Puedes ajustar ancho según necesidad */
         }
 
+        .fuente-titulos {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 5rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .fuente-letra {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 0.95rem; /* Tamaño de letra */
+            font-weight: normal; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .cuadro-personalizado {
+            background-color: #e0f2f1; /* fondo verde claro suave */
+            border: 2px solid darkgreen; /* borde verde oscuro */
+            border-radius: 15px; /* bordes redondeados */
+            padding: 18px; /* espacio interno */
+            color: darkgreen; /* texto verde oscuro */
+            font-family: 'Georgia', serif; /* fuente */
+        }
+
     </style>
 </head>
 <body>
-    <div class="centro-titulo">
-        <h2 class="text-primary text-center fs-1 mb-3">Lista de colaboradores</h2>
+    <div class="centro-titulo fuente-titulos">
+        <h2> COLABORADORES </h2>
     </div>
-    <div class="centro-pantalla">
+    <div>
         <div class="container">
-            <div class="row justify-content-center text-center">
+            <div class="row centro-pantalla text-center">
                 @foreach (var colaborador in Model)
                 {
-                    <div class="col-md-12 col-lg-6 mb-3 fs-5">
-                        <div class="border p-3 rounded" style="background-color: white; color: darkgreen;">
+                    <div class="col-md-4 mb-3">
+                        <div class="cuadro-personalizado fuente-letra">
                             <strong>Nombre:</strong> @colaborador.Name <br />
                             <strong>Email:</strong> @colaborador.Email
                         </div>
