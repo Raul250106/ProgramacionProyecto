@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\Images\\FONDO1.jpg"
     },
     {
+      "Id": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpeg",
+      "PackagePath": "staticwebassets\\Images\\clases.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\images.jpeg",
+      "PackagePath": "staticwebassets\\Images\\images.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpeg",
+      "PackagePath": "staticwebassets\\Images\\materiales.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutoria.jpeg",
+      "PackagePath": "staticwebassets\\Images\\tutoria.jpeg"
+    },
+    {
       "Id": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

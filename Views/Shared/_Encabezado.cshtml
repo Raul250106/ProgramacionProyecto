@@ -12,14 +12,27 @@
             margin: 0;
         }
 
-        .der-pantalla {
+        .izq-fondo {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 0.80rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            background-color: red;
+            border: 2px solid darkred;
+            color: white; /* Color */
             position: fixed;
-            top: 2%;
-            right: 1%;
-            transform: translateX(1%);
+            bottom: 2%;
+            left: 1%;
+            transform: translateX(-1%);
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .fuente-letras {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1.5rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
         }
 
     </style>
@@ -27,10 +40,8 @@
 <body>
     @if (!string.IsNullOrEmpty(nombre))
     {
-        <div class="text-end me-4 mt-2 der-pantalla">
-            <span class="fw-bold">Bienvenido, @nombre</span> <span class="text-muted">(@rol)</span>
-            |
-            <a asp-controller="Usuarios" asp-action="Logout" class="text-danger">Cerrar sesión</a>
+        <div>
+            <a asp-controller="Usuarios" asp-action="Logout" class="btn izq-fondo">Cerrar sesión</a>
         </div>
     }
 </body>

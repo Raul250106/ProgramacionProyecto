@@ -19,10 +19,10 @@
             font-family: 'Georgia', serif; /* fuente */
         }
 
-        .centro-pantalla {
+        .posicion-pantalla {
             position: fixed;
             top: 50%; /* 50% desde arriba */
-            right: 5%; /* 50% desde la izquierda */
+            right: 5%;
             transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
             display: flex; /* Para usar flexbox */
             justify-content: center; /* Centrar horizontal */
@@ -51,20 +51,20 @@
     </style>
 </head>
 <body>
-    <div class="centro-pantalla">
+    <div class="posicion-pantalla">
         <div class="formulario-login cuadro-personalizado">
             <h2 class="text-center fuente-titulo mb-2">Iniciar sesión</h2>
 
             <form asp-action="Login" method="post">
                 <div class="form-group mb-1 fuente-letras">
-                    <label>Correo:</label>
-                    <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen;" />
+                    <label>Correo electronico:</label>
+                    <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen; color: black;" />
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-1 fuente-letras">
-                    <label>Contraseña:</label>
-                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen;"  type="password" />
+                    <label>Contrasena:</label>
+                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen; color: black;" type="password" />
                     <span asp-validation-for="Contrasena" class="text-danger"></span>
                 </div>
 
@@ -80,9 +80,8 @@
 </body>
 </html>
 
-<a class="btn btn-info" style="position: fixed; bottom: 15px; left: 20px; color: darkgreen; background-color: white; border: 2px solid darkgreen; font-weight: bold;"
-   asp-controller="Colaboradores" asp-action="Index">
-    Ver colaboradores
+<a class="btn" style="position: fixed; bottom: 15px; left: 20px; color: darkgreen; background-color: white; border: 2px solid darkgreen; font-weight: bold;"
+   asp-controller="Colaboradores" asp-action="Index">Ver colaboradores
 </a>
 
 @section Scripts {

@@ -1,6 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Inicio - ";
 }
+@{
+    var nombre = Context.Session.GetString("UsuarioNombre");
+    var rol = Context.Session.GetString("UsuarioRol");
+}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,44 +28,101 @@
 
         .fuente-letras {
             font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 1rem; /* Tamaño de letra */
+            font-size: 1.5rem; /* Tamaño de letra */
             font-weight: bold; /* Grosor */
             color: darkgreen; /* Color */
         }
 
+        /* Clase base común para todos los círculos */
         .circulo {
-            background-color: white; /* fondo verde claro suave */
-            border: 2px solid darkgreen; /* borde verde oscuro */
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            padding: 18px; /* espacio interno */
-            color: darkgreen; /* texto verde oscuro */
-            font-family: 'Georgia', serif; /* fuente */
+            width: 225px;
+            height: 225px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 2rem;
+            font-family: 'Georgia', serif;
+            color: darkgreen;
+            text-decoration: none;
+            border: 2px solid darkgreen;
+            position: fixed;
+        }
+
+        /* Fondos */
+        .circulo-blanco {
+            background-color: white;
+        }
+
+        .circulo-imagen {
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Posiciones */
+        .top-row {
+            top: 10%;
+        }
+
+        .bottom-row {
+            bottom: 10%;
+        }
+
+        /* Izquierda a derecha columnas */
+        .col-1 {
+            left: 100px;
+        }
+
+        .col-2 {
+            left: 420px;
+        }
+
+        .col-3 {
+            left: 740px;
+        }
+
+        .col-4 {
+            left: 1060px;
+        }
+
+        .posicion-pantalla {
+            position: fixed;
+            top: 50%; /* 50% desde arriba */
+            transform: translate(0%, -50%); /* Ajusta para centrar exactamente */
+            display: flex; /* Para usar flexbox */
+            justify-content: center; /* Centrar horizontal */
+            align-items: center; /* Centrar vertical */
+            width: 1000px; /* Ancho fijo o el que necesites */
+            height: 400px; /* Alto fijo o el que necesites */
         }
     </style>
 </head>
 <body>
-    <header>
+    @if (!string.IsNullOrEmpty(nombre))
+    {
         <div>
-            <h2 class="izq-pantalla fuente-letras">Seleccione la opción deseada:</h2>
+            <span class="izq-pantalla fuente-letras">
+                ¡Hola @rol.ToLower() @nombre! ¿Qué desea hacer hoy?
+            </span>
         </div>
-    </header>
-
+    }
+    <div class="centro-pantalla">
+    </div>
     <div>
-        <a class="btn circulo" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+        <!-- Fila superior -->
+        <a class="circulo circulo-imagen top-row col-1" style="background-image: url('/Images/images.jpeg');" asp-controller="Tareas" asp-action="Index"></a>
+        <a class="btn circulo circulo-blanco top-row col-2" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+        <a class="circulo circulo-imagen top-row col-3" style="background-image: url('/Images/materiales.jpeg');"></a>
+        <a class="btn circulo circulo-blanco top-row col-4" asp-controller="Clases" asp-action="Index">Clases</a>
     </div>
 
     <div>
-        <a class="btn circulo" asp-controller="Tareas" asp-action="Index">Tareas</a>
-    </div>
-
-    <div>
-        <a class="btn circulo" asp-controller="Materiales" asp-action="Index">Materiales</a>
-    </div>
-
-    <div>
-        <a class="btn circulo" asp-controller="Clases" asp-action="Index">Clases</a>
+        <!-- Fila inferior -->
+        <a class="btn circulo circulo-blanco bottom-row col-1" asp-controller="Tareas" asp-action="Index">Tareas</a>
+        <a class="circulo circulo-imagen bottom-row col-2" style="background-image: url('/Images/tutoria.jpeg');"></a>
+        <a class="btn circulo circulo-blanco bottom-row col-3" asp-controller="Materiales" asp-action="Index">Materiales</a>
+        <a class="circulo circulo-imagen bottom-row col-4" style="background-image: url('/Images/clases.jpeg');"></a>
     </div>
 </body>
 </html>

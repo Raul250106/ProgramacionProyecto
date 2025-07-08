@@ -7,17 +7,19 @@ namespace ProyectoFinalPA.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo obligatorio")]
         public string Nombre { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Campo obligatorio")]
+        [EmailAddress(ErrorMessage = "Formato de correo inválido")]
+        [Display(Name = "Correo electrónico")]
         public string Correo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo obligatorio")]
         public string Rol { get; set; } // "Docente" o "Estudiante"
 
-        [Required]
+        [Required(ErrorMessage = "Campo obligatorio")]
+        [Display(Name = "Contraseña")]
         public string Contrasena { get; set; } // Temporalmente sin hashing
     }
 }

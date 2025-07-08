@@ -1,33 +1,117 @@
 ﻿@model ProyectoFinalPA.Models.Usuario
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-<h2>Registrarse</h2>
+        .salir {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 0.80rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            background-color: red;
+            border: 2px solid darkred;
+            color: white; /* Color */
+            position: fixed;
+            bottom: 2%;
+            left: 1%;
+            transform: translateX(-1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<form asp-action="Registrar" method="post">
-    <div class="form-group">
-        <label asp-for="Nombre"></label>
-        <input asp-for="Nombre" class="form-control" />
-        <span asp-validation-for="Nombre" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Correo"></label>
-        <input asp-for="Correo" class="form-control" />
-        <span asp-validation-for="Correo" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Rol"></label>
-        <select asp-for="Rol" class="form-control">
-            <option>Docente</option>
-            <option>Estudiante</option>
-        </select>
-        <span asp-validation-for="Rol" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Contrasena"></label>
-        <input asp-for="Contrasena" class="form-control" type="password" />
-        <span asp-validation-for="Contrasena" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-success mt-4 w-100">Registrarse</button>
-</form>
+        .btnregistrar {
+            background-color: lawngreen; 
+            color: white;
+        }
 
-<a asp-action="Login" class="btn btn-link mt-2">Volver al login</a>
+        .cuadro-personalizado {
+            background-color: white; /* fondo verde claro suave */
+            border: 2px solid darkgreen; /* borde verde oscuro */
+            border-radius: 15px; /* bordes redondeados */
+            padding: 18px; /* espacio interno */
+            color: darkgreen; /* texto verde oscuro */
+            font-family: 'Georgia', serif; /* fuente */
+            width: 800px; /* ancho */
+            height: 500px; /* alto */
+        }
+
+        .posicion-pantalla {
+            position: fixed;
+            top: 50%; /* 50% desde arriba */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
+            display: flex; /* Para usar flexbox */
+            justify-content: center; /* Centrar horizontal */
+            align-items: center; /* Centrar vertical */
+            width: 775px; /* Ancho fijo o el que necesites */
+            height: 475px; /* Alto fijo o el que necesites */
+        }
+
+        .fuente-titulo {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 2rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .fuente-letras {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="fuente-titulo">Registrarse</h2>
+    </div>
+    <div class="posicion-pantalla">
+        <div class="cuadro-personalizado">
+            <form asp-action="Registrar" method="post">
+                <div class="form-group mb-1">
+                    <label asp-for="Nombre" class="fuente-letras"></label>
+                    <input asp-for="Nombre" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-1">
+                    <label asp-for="Correo" class="fuente-letras"></label>
+                    <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-1">
+                    <label asp-for="Rol" class="fuente-letras"></label>
+                    <select asp-for="Rol" class="form-control" style="border: 2px solid darkgreen; color: black;">
+                        <option>Docente</option>
+                        <option>Estudiante</option>
+                    </select>
+                    <span asp-validation-for="Rol" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-1">
+                    <label asp-for="Contrasena" class="fuente-letras"></label>
+                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen; color: black;" type="password" />
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+
+                <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
+
+                <button type="submit" class="btn w-100 btnregistrar">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Login" class="btn salir">Regresar</a>
+    </div>
+</body>
+</html>
+
+
+
+
 
