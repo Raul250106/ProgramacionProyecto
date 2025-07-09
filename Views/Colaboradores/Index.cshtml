@@ -2,10 +2,6 @@
 @{
     ViewData["Title"] = "Colaboradores - ";
 }
-@*
-Se crea una lista HTML no ordenada <ul> para mostrar los usuarios.
-*@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +12,22 @@ Se crea una lista HTML no ordenada <ul> para mostrar los usuarios.
             margin: 0;
         }
 
+        .salir {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 0.80rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            background-color: red;
+            border: 2px solid darkred;
+            color: white; /* Color */
+            position: fixed;
+            bottom: 2%;
+            left: 1%;
+            transform: translateX(-1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .centro-pantalla {
             position: fixed;
             top: 50%; 
@@ -24,62 +36,67 @@ Se crea una lista HTML no ordenada <ul> para mostrar los usuarios.
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 900px; /* Puedes ajustar ancho según necesidad */
+            width: 800px; /* Puedes ajustar ancho según necesidad */
         }
 
-        .centro-titulo {
-            position: fixed;
-            top: 4%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fuente-titulos {
+        .fuente-titulo {
+            text-align: center;
             font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 5rem; /* Tamaño de letra */
+            font-size: 2rem; /* Tamaño de letra */
             font-weight: bold; /* Grosor */
             color: darkgreen; /* Color */
         }
 
-        .fuente-letra {
+        .fuente-letras {
             font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 0.95rem; /* Tamaño de letra */
+            font-size: 1rem; /* Tamaño de letra */
             font-weight: normal; /* Grosor */
             color: darkgreen; /* Color */
         }
 
         .cuadro-personalizado {
             background-color: white; /* fondo verde claro suave */
-            border: 2px solid darkgreen; /* borde verde oscuro */
+            border: 2.5px solid darkgreen; /* borde verde oscuro */
             border-radius: 15px; /* bordes redondeados */
-            padding: 20px; /* espacio interno */
-            color: darkgreen; /* texto verde oscuro */
+            padding: 18px; /* espacio interno */
             font-family: 'Georgia', serif; /* fuente */
+            height: auto;
+            width: auto;
+        }
+
+        .cuadros {
+            background-color: white;
+            border: 2.5px solid darkgreen; 
+            border-radius: 15px; /* bordes redondeados */
+            padding: 18px; /* espacio interno */
+            font-family: 'Georgia', serif; /* fuente */
+            height: auto;
+            width: auto;
         }
 
     </style>
 </head>
 <body>
-    <div class="centro-titulo fuente-titulos">
-        <h2> Colaboradores </h2>
-    </div>
     <div>
         <div class="container">
-            <div class="row centro-pantalla text-center">
+            <div class="row centro-pantalla text-center cuadro-personalizado">
+                <div>
+                    <h2 class="fuente-titulo"> Colaboradores </h2>
+                </div>
                 @foreach (var colaborador in Model)
                 {
-                    <div class="col-md-4 mb-3">
-                        <div class="cuadro-personalizado fuente-letra">
-                            <strong>Nombre:</strong> @colaborador.Name <br />
-                            <strong>Email:</strong> @colaborador.Email
+                    <div class="col-md-6 mb-2">
+                        <div class="cuadros fuente-letras">
+                            Nombre: @colaborador.Name <br/>
+                            Mail: @colaborador.Email
                         </div>
                     </div>
                 }
             </div>
         </div>
+    </div>
+    <div>
+        <a asp-controller="Usuarios" asp-action="Login" class="btn salir">Regresar</a>
     </div>
 </body>
 </html>

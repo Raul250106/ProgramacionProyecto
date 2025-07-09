@@ -35,10 +35,9 @@
             border: 2px solid darkgreen; /* borde verde oscuro */
             border-radius: 15px; /* bordes redondeados */
             padding: 18px; /* espacio interno */
-            color: darkgreen; /* texto verde oscuro */
             font-family: 'Georgia', serif; /* fuente */
             width: 800px; /* ancho */
-            height: 500px; /* alto */
+            height: auto; /* alto */
         }
 
         .posicion-pantalla {
@@ -54,6 +53,7 @@
         }
 
         .fuente-titulo {
+            text-align: center;
             font-family: 'Georgia', serif; /* Tipo de letra */
             font-size: 2rem; /* Tamaño de letra */
             font-weight: bold; /* Grosor */
@@ -69,11 +69,11 @@
     </style>
 </head>
 <body>
-    <div>
-        <h2 class="fuente-titulo">Registrarse</h2>
-    </div>
     <div class="posicion-pantalla">
         <div class="cuadro-personalizado">
+            <div>
+                <h2 class="fuente-titulo">Registrarse</h2>
+            </div>
             <form asp-action="Registrar" method="post">
                 <div class="form-group mb-1">
                     <label asp-for="Nombre" class="fuente-letras"></label>
