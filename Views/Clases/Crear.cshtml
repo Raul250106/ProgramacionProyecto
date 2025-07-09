@@ -1,23 +1,105 @@
-﻿@model ProyectoFinalPA.Models.Clase
+﻿@model ProyectoFinalPA.Models.Clase   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-<h2>Agregar clase</h2>
+        .salir {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 0.80rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            background-color: red;
+            border: 2px solid darkred;
+            color: white; /* Color */
+            position: fixed;
+            bottom: 2%;
+            left: 1%;
+            transform: translateX(-1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<form asp-action="Crear" method="post">
-    <div>
-        <label>Materia:</label>
-        <input asp-for="Materia" />
-        <span asp-validation-for="Materia" class="text-danger"></span>
+        .btnregistrar {
+            background-color: lawngreen;
+            color: white;
+        }
+
+        .cuadro-personalizado {
+            background-color: white; /* fondo verde claro suave */
+            border: 2px solid darkgreen; /* borde verde oscuro */
+            border-radius: 15px; /* bordes redondeados */
+            padding: 18px; /* espacio interno */
+            font-family: 'Georgia', serif; /* fuente */
+            width: 800px; /* ancho */
+            height: auto; /* alto */
+        }
+
+        .posicion-pantalla {
+            position: fixed;
+            top: 50%; /* 50% desde arriba */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
+            display: flex; /* Para usar flexbox */
+            justify-content: center; /* Centrar horizontal */
+            align-items: center; /* Centrar vertical */
+            width: 775px; /* Ancho fijo o el que necesites */
+            height: 475px; /* Alto fijo o el que necesites */
+        }
+
+        .fuente-titulo {
+            text-align: center;
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 2rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .fuente-letras {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+    </style>
+</head>
+<body>
+    <div class="posicion-pantalla">
+        <div class="cuadro-personalizado">
+            <div>
+                <h2 class="fuente-titulo">Agregar clase</h2>
+            </div>
+            <form asp-action="Crear" method="post">
+                <div>
+                    <label class="fuente-letras">Materia:</label>
+                    <input asp-for="Materia" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <span asp-validation-for="Materia" class="text-danger"></span>
+                </div>
+                <div>
+                    <label class="fuente-letras">Docente:</label>
+                    <input asp-for="Docente" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <span asp-validation-for="Docente" class="text-danger"></span>
+                </div>
+                <div>
+                    <label class="fuente-letras">Duración (minutos):</label>
+                    <input asp-for="DuracionMinutos" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <span asp-validation-for="DuracionMinutos" class="text-danger"></span>
+                </div>
+
+                <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
+
+                <button type="submit" class="btn w-100 btnregistrar">Guardar</button>
+
+            </form>
+        </div>
     </div>
     <div>
-        <label>Docente:</label>
-        <input asp-for="Docente" />
-        <span asp-validation-for="Docente" class="text-danger"></span>
+        <a asp-action="Index" class="btn salir">Regresar</a>
     </div>
-    <div>
-        <label>Duración (minutos):</label>
-        <input asp-for="DuracionMinutos" />
-        <span asp-validation-for="DuracionMinutos" class="text-danger"></span>
-    </div>
-    <button type="submit">Guardar</button>
-</form>
-<a asp-action="Index">Volver</a>
+</body>
+</html>

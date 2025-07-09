@@ -47,5 +47,17 @@ namespace ProyectoFinalPA.Controllers
             }
             return View(material);
         }
+
+        [HttpPost]
+        public IActionResult Eliminar(int id)
+        {
+            var Material = _context.Materiales.FirstOrDefault(t => t.Id == id);
+            if (Material != null)
+            {
+                _context.Materiales.Remove(Material);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

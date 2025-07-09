@@ -48,5 +48,17 @@ namespace ProyectoFinalPA.Controllers
             }
             return View(clase);
         }
+
+        [HttpPost]
+        public IActionResult Eliminar(int id)
+        {
+            var Clase = _context.Clases.FirstOrDefault(t => t.Id == id);
+            if (Clase != null)
+            {
+                _context.Clases.Remove(Clase);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
