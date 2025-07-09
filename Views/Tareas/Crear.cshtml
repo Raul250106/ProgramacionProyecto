@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        /* Establece altura completa y elimina margen predeterminado. */
         body, html {
             height: 100%;
             margin: 0;
         }
-
+        /* Estilo para botón salir, fijo, visible y con colores rojo. */
         .salir {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 0.80rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
+            font-family: 'Georgia', serif; 
+            font-size: 0.80rem; 
+            font-weight: bold; 
             background-color: red;
             border: 2px solid darkred;
-            color: white; /* Color */
+            color: white;
             position: fixed;
             bottom: 2%;
             left: 1%;
@@ -24,47 +25,47 @@
             justify-content: center;
             align-items: center;
         }
-
+        /* Botón guardar verde con texto blanco para destacar acción. */
         .btnregistrar {
             background-color: lawngreen;
             color: white;
         }
-
+        /* Contenedor blanco con borde verde y bordes redondeados. */
         .cuadro-personalizado {
-            background-color: white; /* fondo verde claro suave */
-            border: 2px solid darkgreen; /* borde verde oscuro */
-            border-radius: 15px; /* bordes redondeados */
-            padding: 18px; /* espacio interno */
-            font-family: 'Georgia', serif; /* fuente */
-            width: 800px; /* ancho */
-            height: auto; /* alto */
+            background-color: white; 
+            border: 2px solid darkgreen; 
+            border-radius: 15px; 
+            padding: 18px; 
+            font-family: 'Georgia', serif; 
+            width: 800px;
+            height: auto; 
         }
-
+        /* Centra el cuadro en pantalla con posición fija y tamaño. */
         .posicion-pantalla {
             position: fixed;
-            top: 50%; /* 50% desde arriba */
+            top: 50%; 
             left: 50%;
-            transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
-            display: flex; /* Para usar flexbox */
-            justify-content: center; /* Centrar horizontal */
-            align-items: center; /* Centrar vertical */
-            width: 775px; /* Ancho fijo o el que necesites */
-            height: 475px; /* Alto fijo o el que necesites */
+            transform: translate(-50%, -50%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            width: 775px; 
+            height: 475px; 
         }
-
+        /* Estilo para título principal, centrado y con letra verde. */
         .fuente-titulo {
             text-align: center;
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 2rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 2rem; 
+            font-weight: bold;
+            color: darkgreen; 
         }
-
+        /* Estilo para etiquetas y texto importante en verde oscuro. */
         .fuente-letras {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 1rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 1rem; 
+            font-weight: bold; 
+            color: darkgreen; 
         }
     </style>
 </head>
@@ -72,32 +73,40 @@
     <div class="posicion-pantalla">
         <div class="cuadro-personalizado">
             <div>
+                <!-- Título de formulario para agregar nueva clase -->
                 <h2 class="fuente-titulo">Agregar tarea</h2>
             </div>
+            <!-- Formulario que envía datos para crear una clase -->
             <form asp-action="Crear" method="post">
                 <div>
+                    <!-- Campo para ingresar descripcion de la tarea con validación -->
                     <label class="fuente-letras">Descripción:</label>
                     <input asp-for="Descripcion" class="form-control" style="border: 2px solid darkgreen; color: black;" />
                     <span asp-validation-for="Descripcion" class="text-danger"></span>
                 </div>
                 <div>
+                    <!-- Campo para ingresar materia de la tarea con validación -->
                     <label class="fuente-letras">Materia:</label>
                     <input asp-for="Materia" class="form-control" style="border: 2px solid darkgreen; color: black;" />
                     <span asp-validation-for="Materia" class="text-danger"></span>
                 </div>
                 <div>
+                    <!-- Campo para ingresar fecha de entrega de la tarea con validación -->
                     <label class="fuente-letras">Fecha de entrega:</label>
                     <input asp-for="FechaEntrega" class="form-control" style="border: 2px solid darkgreen; color: black;" />
                     <span asp-validation-for="FechaEntrega" class="text-danger"></span>
                 </div>
 
+                <!-- Línea divisoria verde para separar secciones del formulario -->
                 <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
 
+                <!-- Botón para enviar formulario con estilo llamativo -->
                 <button type="submit" class="btn w-100 btnregistrar">Guardar</button>
             </form>
         </div>
     </div>
     <div>
+        <!-- Botón fijo para regresar a la lista de clases -->
         <a asp-action="Index" class="btn salir">Regresar</a>
     </div>
 </body>

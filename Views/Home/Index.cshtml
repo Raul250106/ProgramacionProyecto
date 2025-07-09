@@ -1,6 +1,8 @@
-﻿@{
+﻿<!-- Define el título que aparecerá en la pestaña del navegador -->
+@{
     ViewData["Title"] = "Inicio - ";
 }
+<!-- Obtiene nombre y rol del usuario desde la sesión activa -->
 @{
     var nombre = Context.Session.GetString("UsuarioNombre");
     var rol = Context.Session.GetString("UsuarioRol");
@@ -15,7 +17,7 @@
             height: 100%;
             margin: 0;
         }
-
+        /* Posiciona mensaje de bienvenida en parte izquierda superior */
         .izq-pantalla {
             position: fixed;
             top: 13%;
@@ -25,27 +27,27 @@
             justify-content: center;
             align-items: center;
         }
-
+        /* Estilo para texto importante con letra elegante y verde oscuro */
         .fuente-letras {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 1.5rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: darkgreen; 
         }
-
+        /* Centra botones principales en medio de la pantalla */
         .posicion-botones {
             position: fixed;
             top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
-            display: flex; /* Para usar flexbox */
+            display: flex; 
             flex-direction: column;
-            justify-content: center; /* Centrar horizontal */
-            align-items: center; /* Centrar vertical */
-            width: auto; /* Ancho fijo o el que necesites */
-            height: auto; /* Alto fijo o el que necesites */
+            justify-content: center;
+            align-items: center; 
+            width: auto; 
+            height: auto; 
         }
-
+        /* Estilo para botones verdes y azules como Clases y Materiales */
         .boton-verde{
             width: 500px;
             background-color: lawngreen;
@@ -58,11 +60,11 @@
             border: 2px solid darkgreen;
             color: white;
         }
-
+        /* Fuente grande y elegante para el texto de botones */
         .fuente {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 2rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
+            font-family: 'Georgia', serif; 
+            font-size: 2rem; 
+            font-weight: bold;
         }
     </style>
 </head>
@@ -70,12 +72,14 @@
     @if (!string.IsNullOrEmpty(nombre))
     {
         <div>
+            <!-- Muestra saludo personalizado si el usuario está logueado correctamente -->
             <span class="izq-pantalla fuente-letras">
                 ¡Hola @rol.ToLower() @nombre! ¿Qué desea hacer hoy?
             </span>
         </div>
     }
     <div class="posicion-botones">
+        <!-- Botones de navegación hacia los módulos principales del sistema -->
         <a class="btn boton-verde fuente mb-5" asp-controller="Clases" asp-action="Index">Clases</a>
         <a class="btn boton-azul fuente mb-5" asp-controller="Tareas" asp-action="Index">Tareas</a>
         <a class="btn boton-verde fuente mb-5" asp-controller="Materiales" asp-action="Index">Materiales</a>

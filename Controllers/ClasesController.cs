@@ -6,21 +6,23 @@ using System.Linq;
 
 namespace ProyectoFinalPA.Controllers
 {
+    // Controlador para gestionar las operaciones CRUD de clases.
     public class ClasesController : Controller
     {
+        // Conecta programa con base de datos y sus tablas.
         private readonly ApplicationDbContext _context;
 
         public ClasesController(ApplicationDbContext context)
         {
             _context = context;
         }
-
+        // Obtiene lista de clases desde base y la muestra.
         public IActionResult Index()
         {
-            var Clase = _context.Clases.ToList(); // usa base de datos
+            var Clase = _context.Clases.ToList();
             return View(Clase);
         }
-
+        // Muestra formulario para crear clase solo si es docente.
         public IActionResult Crear()
         {
             if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
@@ -30,7 +32,7 @@ namespace ProyectoFinalPA.Controllers
             }
             return View();
         }
-
+        // Recibe datos nuevos, valida y guarda clase en base datos.
         [HttpPost]
         public IActionResult Crear(Clase clase)
         {
@@ -48,7 +50,7 @@ namespace ProyectoFinalPA.Controllers
             }
             return View(clase);
         }
-
+        // Borra clase por id en la base de datos y actualiza la vista de clases.
         [HttpPost]
         public IActionResult Eliminar(int id)
         {

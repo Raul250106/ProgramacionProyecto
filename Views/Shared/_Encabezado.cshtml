@@ -1,4 +1,5 @@
-﻿@{
+﻿<!-- Recupera nombre y rol del usuario desde la sesión activa -->
+@{
     var nombre = Context.Session.GetString("UsuarioNombre");
     var rol = Context.Session.GetString("UsuarioRol");
 }
@@ -11,14 +12,14 @@
             height: 100%;
             margin: 0;
         }
-
+        /* Estilo para botón “Cerrar sesión” en esquina superior derecha */
         .der-fondo {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 0.80rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
+            font-family: 'Georgia', serif; 
+            font-size: 0.80rem; 
+            font-weight: bold; 
             background-color: red;
             border: 2px solid darkred;
-            color: white; /* Color */
+            color: white; 
             position: fixed;
             top: 2%;
             right: 1%;
@@ -27,25 +28,28 @@
             justify-content: center;
             align-items: center;
         }
-
+        /* Estilo para letras principales en verde y con fuente elegante */
         .fuente-letras {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 1.5rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: darkgreen;
         }
 
     </style>
 </head>
 <body>
+    <!-- Verifica si hay sesión activa para mostrar cabecera y botón -->
     @if (!string.IsNullOrEmpty(nombre))
     {
+        <!-- Cabecera con título centrado solo si el usuario está logueado -->
         <header style="background-color: white; border-bottom: 2px solid darkgreen; padding: 0 20px; height: 60px; display: flex; align-items: center;">
             <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
                 <h1 style="font-size: 2rem; font-family: 'Georgia', serif; color: darkgreen; font-weight: bold; margin: 0 auto;">AulaGestión</h1>
             </div>
         </header>
         <div>
+            <!-- Botón rojo fijo que permite cerrar la sesión del usuario -->
             <a asp-controller="Usuarios" asp-action="Logout" class="btn der-fondo">Cerrar sesión</a>
         </div>
     }

@@ -9,33 +9,27 @@ namespace ProyectoFinalPA.Controllers
 {
     public class ColaboradoresController : Controller
     {
-        // Acción asincrónica que se ejecuta al abrir la página de inicio
         public async Task<IActionResult> Index()
         {
-            // Creamos una lista vacía donde almacenaremos los colaboradores recibidos
+            // Lista para guardar colaboradores recibidos desde API externa.
             List<Colaborador> colaboradores1 = new List<Colaborador>();
 
-            // Instanciamos un cliente HTTP para hacer solicitudes al servidor
             using (HttpClient client = new HttpClient())
             {
-                // URL del servicio público
+                // URL de la API desde donde se obtienen colaboradores.
                 string url = "https://jsonplaceholder.typicode.com/users";
-
-                // Enviamos una solicitud HTTP GET a la URL indicada
+                // Envía petición HTTP y espera respuesta de forma asíncrona.
                 HttpResponseMessage response = await client.GetAsync(url);
 
-                // Verificamos que la respuesta fue exitosa (HTTP 200 OK)
                 if (response.IsSuccessStatusCode)
                 {
-                    // Leemos el contenido de la respuesta como una cadena JSON
+                    // Lee contenido JSON recibido en forma de texto.
                     string json = await response.Content.ReadAsStringAsync();
-
-                    // Convertimos (deserializamos) ese JSON en una lista de objetos Colaborador
+                    // Convierte JSON en lista de objetos colaborador manejables.
                     colaboradores1 = JsonConvert.DeserializeObject<List<Colaborador>>(json);
                 }
             }
-
-            // Enviamos la lista de colaboradores a la vista para que sean mostrados
+            // Devuelve la lista para mostrarla en la vista web.
             return View(colaboradores1);
         }
     }

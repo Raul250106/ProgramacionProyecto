@@ -1,4 +1,5 @@
-﻿@model ProyectoFinalPA.Models.LoginViewModel
+﻿<!-- Usa el modelo LoginViewModel para enlazar datos del formulario -->
+@model ProyectoFinalPA.Models.LoginViewModel
 
 <!DOCTYPE html>
 <html lang="es">
@@ -9,41 +10,41 @@
             height: 100%;
             margin: 0;
         }
-
+        /* Estilo del recuadro del formulario con borde verde y fondo blanco */
         .cuadro-personalizado {
-            background-color: white; /* fondo verde claro suave */
-            border: 2px solid darkgreen; /* borde verde oscuro */
-            border-radius: 15px; /* bordes redondeados */
-            padding: 18px; /* espacio interno */
-            font-family: 'Georgia', serif; /* fuente */
+            background-color: white; 
+            border: 2px solid darkgreen; 
+            border-radius: 15px;
+            padding: 18px;
+            font-family: 'Georgia', serif; 
         }
-
+        /* Centra el formulario en pantalla, alineado a la derecha */
         .posicion-pantalla {
             position: fixed;
-            top: 50%; /* 50% desde arriba */
+            top: 50%;
             right: 5%;
-            transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
-            display: flex; /* Para usar flexbox */
-            justify-content: center; /* Centrar horizontal */
-            align-items: center; /* Centrar vertical */
-            width: 300px; /* Ancho fijo o el que necesites */
-            height: 150px; /* Alto fijo o el que necesites */
+            transform: translate(-50%, -50%); 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            width: 300px; 
+            height: 150px; 
         }
-
+        /* Estilo del título “Iniciar sesión”, elegante y llamativo */
         .fuente-titulo {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 2rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: darkgreen; 
         }
-
+        /* Estilo para etiquetas de entrada: fuente georgia y color verde */
         .fuente-letras {
-            font-family: 'Georgia', serif; /* Tipo de letra */
-            font-size: 1rem; /* Tamaño de letra */
-            font-weight: bold; /* Grosor */
-            color: darkgreen; /* Color */
+            font-family: 'Georgia', serif; 
+            font-size: 1rem; 
+            font-weight: bold;
+            color: darkgreen; 
         }
-
+        /* Ancho fijo del formulario para mantener proporción y orden */
         .formulario-login {
             width: 300px;
         }
@@ -52,25 +53,31 @@
 <body>
     <div class="posicion-pantalla">
         <div class="formulario-login cuadro-personalizado">
+            <!-- Título del formulario de login, centrado y visible -->
             <h2 class="text-center fuente-titulo mb-2">Iniciar sesión</h2>
-
+            <!-- Formulario que envía datos de login mediante POST -->
             <form asp-action="Login" method="post">
                 <div class="form-group mb-1 fuente-letras">
+                    <!-- Campo para ingresar correo y mostrar errores si los hay -->
                     <label>Correo electronico:</label>
                     <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen; color: black;" />
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-1 fuente-letras">
+                    <!-- Campo para contraseña con estilo y validación visual -->
                     <label>Contrasena:</label>
                     <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen; color: black;" type="password" />
                     <span asp-validation-for="Contrasena" class="text-danger"></span>
                 </div>
 
+                <!-- Línea divisoria verde entre campos y botones -->
                 <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
 
                 <div class="mb-1">
+                    <!-- Botón azul para enviar formulario e iniciar sesión -->
                     <button type="submit" class="btn w-100" style="background-color: deepskyblue;border: 2px solid dodgerblue; color: white">Ingresar</button>
+                    <!-- Botón verde que lleva a vista de registro de usuario -->
                     <a asp-controller="Usuarios" asp-action="Registrar" class="btn  mt-2 w-100" style="background-color: lawngreen;border: 2px solid limegreen; color: white">Registrarse</a>
                 </div>
             </form>
@@ -78,7 +85,7 @@
     </div>
 </body>
 </html>
-
+<!-- Botón adicional para ver colaboradores, fijo en parte inferior izquierda -->
 <a class="btn" style="position: fixed; bottom: 15px; left: 20px; color: darkgreen; background-color: white; border: 2px solid darkgreen; font-weight: bold;"
    asp-controller="Colaboradores" asp-action="Index">Ver colaboradores
 </a>

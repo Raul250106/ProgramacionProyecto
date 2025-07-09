@@ -2,8 +2,10 @@
 
 namespace ProyectoFinalPA.Models
 {
+    // Modelo que representa una tutoria con sus propiedades básicas.
     public class Tutoria
     {
+        // Identificador único que distingue cada registro en la tabla.
         [Key]
         public int Id { get; set; }
 

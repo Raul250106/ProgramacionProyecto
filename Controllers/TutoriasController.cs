@@ -6,21 +6,23 @@ using System.Linq;
 
 namespace ProyectoFinalPA.Controllers
 {
+    // Controlador para gestionar operaciones CRUD sobre tutorias.
     public class TutoriasController : Controller
     {
+        // Conecta programa con base de datos y tablas.
         private readonly ApplicationDbContext _context;
-
+        // Constructor recibe contexto para poder usar base de datos.
         public TutoriasController(ApplicationDbContext context)
         {
             _context = context;
         }
-
+        // Obtiene lista completa de tutorias y los muestra en vista.
         public IActionResult Index()
         {
             var tutoria = _context.Tutorias.ToList();
             return View(tutoria);
         }
-
+        // Muestra formulario para crear tutorias solo si usuario es docente.
         public IActionResult Crear()
         {
             if (HttpContext.Session.GetString("UsuarioRol") != "Docente")
@@ -30,7 +32,7 @@ namespace ProyectoFinalPA.Controllers
             }
             return View();
         }
-
+        // Recibe datos, valida, guarda nueva tutoria en base de datos.
         [HttpPost]
         public IActionResult Crear(Tutoria tutoria)
         {
@@ -47,7 +49,7 @@ namespace ProyectoFinalPA.Controllers
             }
             return View(tutoria);
         }
-
+        // Elimina tutorias seleccionado por id en la base de datos y actualiza lista vista.
         [HttpPost]
         public IActionResult Eliminar(int id)
         {

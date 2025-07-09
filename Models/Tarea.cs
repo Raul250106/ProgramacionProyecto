@@ -2,8 +2,10 @@
 
 namespace ProyectoFinalPA.Models
 {
+    // Modelo que representa una tarea con sus propiedades básicas.
     public class Tarea
     {
+        // Identificador único que distingue cada registro en la tabla.
         [Key]
         public int Id { get; set; }
 

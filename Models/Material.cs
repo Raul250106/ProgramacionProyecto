@@ -2,8 +2,10 @@
 
 namespace ProyectoFinalPA.Models
 {
+    // Modelo que representa un material con sus propiedades básicas.
     public class Material
     {
+        // Identificador único que distingue cada registro en la tabla.
         [Key]
         public int Id { get; set; }
 
