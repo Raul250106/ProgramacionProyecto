@@ -1,40 +1,130 @@
 ﻿@model List<ProyectoFinalPA.Models.Clase>
 @{
     ViewData["Title"] = "Clases - ";
-}
-
-<h2>Lista de clases</h2>
-@{
     var rol = Context.Session.GetString("UsuarioRol");
 }
 
-@if (rol == "Docente")
-{
-    <a asp-action="Crear" class="btn btn-primary mb-3">AGREGAR CLASE</a>
-}
-@if (Model.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Materia</th>
-                <th>Docente</th>
-                <th>Duración (min)</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Materia</td>
-                    <td>@item.Docente</td>
-                    <td>@item.DuracionMinutos</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>No hay clases registradas.</p>
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .tabla {
+            min-width: 900px;
+            border-collapse: collapse;
+            background-color: white;
+            border: 2px solid darkgreen;
+            border-radius: 20px;
+        }
+
+        .encabezado {
+            background-color: lawngreen;
+            border: 2px solid darkgreen;
+        }
+
+        .celdas-enc, .celdas {
+            padding: 20px;
+            height: 30px;
+            text-align: center;
+            border: 2px solid darkgreen;
+        }
+
+        .fuente-titulo {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 2rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+        }
+
+        .fuente-titulos {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1.5rem; /* Tamaño de letra */
+            font-weight: bold; /* Grosor */
+        }
+
+        .fuente-letras {
+            font-family: 'Georgia', serif; /* Tipo de letra */
+            font-size: 1rem; /* Tamaño de letra */
+            font-weight: normal; /* Grosor */
+            color: darkgreen; /* Color */
+        }
+
+        .izq-pantalla {
+            position: fixed;
+            top: 13%;
+            left: 2%;
+            transform: translateX(-2%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .posicion-pantalla {
+            position: fixed;
+            top: 50%; /* 50% desde arriba */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Ajusta para centrar exactamente */
+            display: flex; /* Para usar flexbox */
+            justify-content: center; /* Centrar horizontal */
+            align-items: center; /* Centrar vertical */
+        }
+
+        .btnregistrar {
+            background-color: lawngreen;
+            color: white;
+            position: fixed;
+            top: 20%;
+            left: 2%;
+            transform: translateX(-2%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2 class="fuente-titulo izq-pantalla">Lista de clases</h2>
+    </div>
+
+    @if (rol == "Docente")
+    {
+        <a asp-action="Crear" class="btn btnregistrar">Agregar clase</a>
+    }
+
+    <div class="posicion-pantalla">
+        @if (Model.Any())
+        {
+            <table class="tabla">
+                <thead class="encabezado">
+                    <tr class="fuente-titulos">
+                        <th class="celdas-enc" style="color: white;">Materia</th>
+                        <th class="celdas-enc" style="color: white;">Docente</th>
+                        <th class="celdas-enc" style="color: white;">Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="fuente-letras">
+                            <td class="celdas">@item.Materia</td>
+                            <td class="celdas">@item.Docente</td>
+                            <td class="celdas">@item.DuracionMinutos</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="fuente-titulos posicion-pantalla">No hay clases registradas.</p>
+        }
+    </div>
+</body>
+</html>
