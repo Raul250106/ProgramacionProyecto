@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pw86ZP+VU10gL/LGLB9YAC33tAZ0N8IupMo/ONEB2LM=",
+  "Hash": "7WrikoaJrXe07iUKq++gYefwI9BhPpKAf71Dery4OS0=",
   "Source": "ProyectoFinalPA",
   "BasePath": "_content/ProyectoFinalPA",
   "Mode": "Default",
@@ -101,12 +101,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpeg",
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpg",
       "SourceId": "ProyectoFinalPA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
       "BasePath": "_content/ProyectoFinalPA",
-      "RelativePath": "Images/clases#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/clases#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -115,11 +115,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "z6rkapee9c",
-      "Integrity": "VYtjrazsvOuyi0mgoVaUv5raz5H+gQiMRgbh+Wl2X38=",
+      "Fingerprint": "t97vj2xrb9",
+      "Integrity": "kUEz5d8nsbV37cka4XrGOaMro0M1VbqmqOzfNTxN8+w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\clases.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\clases.jpg"
     },
     {
       "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDOAZUL.jpg",
@@ -143,12 +143,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\FONDOAZUL.jpg"
     },
     {
-      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\images.jpeg",
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpg",
       "SourceId": "ProyectoFinalPA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
       "BasePath": "_content/ProyectoFinalPA",
-      "RelativePath": "Images/images#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/materiales#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -157,19 +157,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rxz0d2l8rn",
-      "Integrity": "73poC+mcvwcFzxCuutuKx2Dq6A49ZK/2e8WUPD8UhP4=",
+      "Fingerprint": "3t1sitqg0l",
+      "Integrity": "2YF6q6VfmUTqLVyTdn2k7qd5HOuz6egZKUfHGv5iEwA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\images.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\materiales.jpg"
     },
     {
-      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpeg",
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tareas1.jpg",
       "SourceId": "ProyectoFinalPA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
       "BasePath": "_content/ProyectoFinalPA",
-      "RelativePath": "Images/materiales#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/tareas1#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -178,19 +178,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "p6tr68ni5o",
-      "Integrity": "gaLyWPqPc2pHx9KNWbR5UUXMOwWwQ0zwiHvP20yHIFs=",
+      "Fingerprint": "0rspwtr1ib",
+      "Integrity": "NP4BIaYehJLAqJnUqW60Lk32aOydnbAsQnHcYFJtPCU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\materiales.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\tareas1.jpg"
     },
     {
-      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutoria.jpeg",
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutorias.jpg",
       "SourceId": "ProyectoFinalPA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
       "BasePath": "_content/ProyectoFinalPA",
-      "RelativePath": "Images/tutoria#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/tutorias#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -199,11 +199,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4h8jj4xjsq",
-      "Integrity": "qASj9mfPZ+ZP/TuwS7NqJsndAOoumkWGv4RyjgE5N0w=",
+      "Fingerprint": "wr4mvll0k6",
+      "Integrity": "VPstf5zyAJqJuG1DOAsTbMRRUJYG0eatZr6vFgzKcoI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\tutoria.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\tutorias.jpg"
     },
     {
       "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\js\\site.js",
@@ -1590,8 +1590,8 @@
       ]
     },
     {
-      "Route": "Images/clases.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpeg",
+      "Route": "Images/clases.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1600,7 +1600,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14756"
+          "Value": "1529703"
         },
         {
           "Name": "Content-Type",
@@ -1608,11 +1608,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VYtjrazsvOuyi0mgoVaUv5raz5H+gQiMRgbh+Wl2X38=\""
+          "Value": "\"kUEz5d8nsbV37cka4XrGOaMro0M1VbqmqOzfNTxN8+w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:48:43 GMT"
+          "Value": "Sun, 13 Jul 2025 04:16:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1622,13 +1622,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VYtjrazsvOuyi0mgoVaUv5raz5H+gQiMRgbh+Wl2X38="
+          "Value": "sha256-kUEz5d8nsbV37cka4XrGOaMro0M1VbqmqOzfNTxN8+w="
         }
       ]
     },
     {
-      "Route": "Images/clases.z6rkapee9c.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpeg",
+      "Route": "Images/clases.t97vj2xrb9.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\clases.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1637,7 +1637,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14756"
+          "Value": "1529703"
         },
         {
           "Name": "Content-Type",
@@ -1645,11 +1645,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VYtjrazsvOuyi0mgoVaUv5raz5H+gQiMRgbh+Wl2X38=\""
+          "Value": "\"kUEz5d8nsbV37cka4XrGOaMro0M1VbqmqOzfNTxN8+w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:48:43 GMT"
+          "Value": "Sun, 13 Jul 2025 04:16:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1659,15 +1659,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "z6rkapee9c"
+          "Value": "t97vj2xrb9"
         },
         {
           "Name": "label",
-          "Value": "Images/clases.jpeg"
+          "Value": "Images/clases.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VYtjrazsvOuyi0mgoVaUv5raz5H+gQiMRgbh+Wl2X38="
+          "Value": "sha256-kUEz5d8nsbV37cka4XrGOaMro0M1VbqmqOzfNTxN8+w="
         }
       ]
     },
@@ -1754,8 +1754,8 @@
       ]
     },
     {
-      "Route": "Images/images.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\images.jpeg",
+      "Route": "Images/materiales.3t1sitqg0l.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1764,7 +1764,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13128"
+          "Value": "1855211"
         },
         {
           "Name": "Content-Type",
@@ -1772,48 +1772,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"73poC+mcvwcFzxCuutuKx2Dq6A49ZK/2e8WUPD8UhP4=\""
+          "Value": "\"2YF6q6VfmUTqLVyTdn2k7qd5HOuz6egZKUfHGv5iEwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:46:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-73poC+mcvwcFzxCuutuKx2Dq6A49ZK/2e8WUPD8UhP4="
-        }
-      ]
-    },
-    {
-      "Route": "Images/images.rxz0d2l8rn.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\images.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"73poC+mcvwcFzxCuutuKx2Dq6A49ZK/2e8WUPD8UhP4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:46:07 GMT"
+          "Value": "Sun, 13 Jul 2025 04:19:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1823,21 +1786,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rxz0d2l8rn"
+          "Value": "3t1sitqg0l"
         },
         {
           "Name": "label",
-          "Value": "Images/images.jpeg"
+          "Value": "Images/materiales.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-73poC+mcvwcFzxCuutuKx2Dq6A49ZK/2e8WUPD8UhP4="
+          "Value": "sha256-2YF6q6VfmUTqLVyTdn2k7qd5HOuz6egZKUfHGv5iEwA="
         }
       ]
     },
     {
-      "Route": "Images/materiales.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpeg",
+      "Route": "Images/materiales.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1846,7 +1809,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17402"
+          "Value": "1855211"
         },
         {
           "Name": "Content-Type",
@@ -1854,11 +1817,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gaLyWPqPc2pHx9KNWbR5UUXMOwWwQ0zwiHvP20yHIFs=\""
+          "Value": "\"2YF6q6VfmUTqLVyTdn2k7qd5HOuz6egZKUfHGv5iEwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:48:07 GMT"
+          "Value": "Sun, 13 Jul 2025 04:19:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1868,13 +1831,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gaLyWPqPc2pHx9KNWbR5UUXMOwWwQ0zwiHvP20yHIFs="
+          "Value": "sha256-2YF6q6VfmUTqLVyTdn2k7qd5HOuz6egZKUfHGv5iEwA="
         }
       ]
     },
     {
-      "Route": "Images/materiales.p6tr68ni5o.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\materiales.jpeg",
+      "Route": "Images/tareas1.0rspwtr1ib.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tareas1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1883,7 +1846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17402"
+          "Value": "1988105"
         },
         {
           "Name": "Content-Type",
@@ -1891,11 +1854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gaLyWPqPc2pHx9KNWbR5UUXMOwWwQ0zwiHvP20yHIFs=\""
+          "Value": "\"NP4BIaYehJLAqJnUqW60Lk32aOydnbAsQnHcYFJtPCU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:48:07 GMT"
+          "Value": "Sun, 13 Jul 2025 04:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1905,21 +1868,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "p6tr68ni5o"
+          "Value": "0rspwtr1ib"
         },
         {
           "Name": "label",
-          "Value": "Images/materiales.jpeg"
+          "Value": "Images/tareas1.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gaLyWPqPc2pHx9KNWbR5UUXMOwWwQ0zwiHvP20yHIFs="
+          "Value": "sha256-NP4BIaYehJLAqJnUqW60Lk32aOydnbAsQnHcYFJtPCU="
         }
       ]
     },
     {
-      "Route": "Images/tutoria.4h8jj4xjsq.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutoria.jpeg",
+      "Route": "Images/tareas1.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tareas1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1928,7 +1891,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8770"
+          "Value": "1988105"
         },
         {
           "Name": "Content-Type",
@@ -1936,56 +1899,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qASj9mfPZ+ZP/TuwS7NqJsndAOoumkWGv4RyjgE5N0w=\""
+          "Value": "\"NP4BIaYehJLAqJnUqW60Lk32aOydnbAsQnHcYFJtPCU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:47:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4h8jj4xjsq"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/tutoria.jpeg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qASj9mfPZ+ZP/TuwS7NqJsndAOoumkWGv4RyjgE5N0w="
-        }
-      ]
-    },
-    {
-      "Route": "Images/tutoria.jpeg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutoria.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8770"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qASj9mfPZ+ZP/TuwS7NqJsndAOoumkWGv4RyjgE5N0w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 23:47:51 GMT"
+          "Value": "Sun, 13 Jul 2025 04:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1995,7 +1913,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qASj9mfPZ+ZP/TuwS7NqJsndAOoumkWGv4RyjgE5N0w="
+          "Value": "sha256-NP4BIaYehJLAqJnUqW60Lk32aOydnbAsQnHcYFJtPCU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/tutorias.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutorias.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1674761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VPstf5zyAJqJuG1DOAsTbMRRUJYG0eatZr6vFgzKcoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Jul 2025 04:17:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VPstf5zyAJqJuG1DOAsTbMRRUJYG0eatZr6vFgzKcoI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/tutorias.wr4mvll0k6.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\tutorias.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1674761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VPstf5zyAJqJuG1DOAsTbMRRUJYG0eatZr6vFgzKcoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Jul 2025 04:17:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wr4mvll0k6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/tutorias.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VPstf5zyAJqJuG1DOAsTbMRRUJYG0eatZr6vFgzKcoI="
         }
       ]
     },
