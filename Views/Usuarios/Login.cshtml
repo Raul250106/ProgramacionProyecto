@@ -13,7 +13,7 @@
         /* Estilo del recuadro del formulario con borde verde y fondo blanco */
         .cuadro-personalizado {
             background-color: white; 
-            border: 2px solid darkgreen; 
+            border: 2px solid black;
             border-radius: 15px;
             padding: 18px;
             font-family: 'Georgia', serif; 
@@ -35,14 +35,14 @@
             font-family: 'Georgia', serif; 
             font-size: 2rem; 
             font-weight: bold; 
-            color: darkgreen; 
+            color: black;
         }
         /* Estilo para etiquetas de entrada: fuente georgia y color verde */
         .fuente-letras {
             font-family: 'Georgia', serif; 
             font-size: 1rem; 
             font-weight: bold;
-            color: darkgreen; 
+            color: black;
         }
         /* Ancho fijo del formulario para mantener proporción y orden */
         .formulario-login {
@@ -60,25 +60,25 @@
                 <div class="form-group mb-1 fuente-letras">
                     <!-- Campo para ingresar correo y mostrar errores si los hay -->
                     <label>Correo electronico:</label>
-                    <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="Correo" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-1 fuente-letras">
                     <!-- Campo para contraseña con estilo y validación visual -->
                     <label>Contrasena:</label>
-                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen; color: black;" type="password" />
+                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid black; color: black;" type="password" />
                     <span asp-validation-for="Contrasena" class="text-danger"></span>
                 </div>
 
                 <!-- Línea divisoria verde entre campos y botones -->
-                <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
+                <div style="height: 2px; background-color: black; margin: 15px 0;"></div>
 
                 <div class="mb-1">
                     <!-- Botón azul para enviar formulario e iniciar sesión -->
-                    <button type="submit" class="btn w-100" style="background-color: deepskyblue;border: 2px solid dodgerblue; color: white">Ingresar</button>
+                    <button type="submit" class="btn w-100" style="background-color: #042d62;border: 2px solid darkblue; color: white">Ingresar</button>
                     <!-- Botón verde que lleva a vista de registro de usuario -->
-                    <a asp-controller="Usuarios" asp-action="Registrar" class="btn  mt-2 w-100" style="background-color: lawngreen;border: 2px solid limegreen; color: white">Registrarse</a>
+                    <a asp-controller="Usuarios" asp-action="Registrar" class="btn  mt-2 w-100" style="background-color: #FFB300;border: 2px solid #B8860B; color: white">Registrarse</a>
                 </div>
             </form>
         </div>
@@ -86,7 +86,7 @@
 </body>
 </html>
 <!-- Botón adicional para ver colaboradores, fijo en parte inferior izquierda -->
-<a class="btn" style="position: fixed; bottom: 15px; left: 20px; color: darkgreen; background-color: white; border: 2px solid darkgreen; font-weight: bold;"
+<a class="btn" style="position: fixed; bottom: 15px; left: 20px; color: black; background-color: white; border: 2px solid black; font-weight: bold;"
    asp-controller="Colaboradores" asp-action="Index">Ver colaboradores
 </a>
 

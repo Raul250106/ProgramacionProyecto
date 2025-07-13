@@ -19,19 +19,25 @@
             min-width: 900px;
             border-collapse: collapse;
             background-color: white;
-            border: 2px solid darkgreen;
+            border: 2px solid black;
             border-radius: 20px;
         }
 
+        .tabla-contenedor {
+            max-height: 400px; 
+            overflow-y: auto;
+            padding: 10px;
+        }
+
         .encabezado {
-            background-color: lawngreen;
-            border: 2px solid darkgreen;
+            background-color: #FFB300;
+            border: 2px solid black;
         }
 
         .celdas-enc, .celdas {
             padding: 15px;
             text-align: center;
-            border: 2px solid darkgreen;
+            border: 2px solid black;
         }
 
         .fuente-titulo {
@@ -50,7 +56,7 @@
             font-family: 'Georgia', serif;
             font-size: 1rem; 
             font-weight: normal; 
-            color: darkgreen; 
+            color: black;
         }
 
         .izq-pantalla {
@@ -64,17 +70,14 @@
         }
 
         .posicion-pantalla {
-            position: fixed;
-            top: 50%; 
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
+            position: relative;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 1000px;
         }
 
         .btnagregar {
-            background-color: lawngreen;
+            background-color: #FFB300;
             color: white;
             position: fixed;
             top: 20%;
@@ -97,7 +100,7 @@
             align-items: center;
             margin-left: 20px;
             position: relative;
-            left: 35px; 
+            left: 10px; 
         }
 
         .salir {
@@ -120,47 +123,48 @@
 <body>
 
     <div>
-        <h2 class="fuente-titulo izq-pantalla" style="color: darkgreen">Lista de tareas</h2>
+        <h2 class="fuente-titulo izq-pantalla" style="color: black">Lista de tareas</h2>
     </div>
 
     @if (rol == "Docente")
     {
-        <a asp-action="Crear" class="btn btnagregar" style="border: 2px solid darkgreen;">Agregar tarea</a>
+        <a asp-action="Crear" class="btn btnagregar" style="border: 2px solid #B8860B;">Agregar tarea</a>
     }
-
     <div class="posicion-pantalla">
-        @if (Model.Any())
-        {
-            <table class="tabla">
-                <thead class="encabezado">
-                    <tr class="fuente-titulos">
-                        <th class="celdas-enc" style="color: white;">Descripción</th>
-                        <th class="celdas-enc" style="color: white;">Materia</th>
-                        <th class="celdas-enc" style="color: white;">Fecha de entrega</th>
-                        <th class="celdas-enc" style="color: white;">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr class="fuente-letras">
-                            <td class="celdas">@item.Descripcion</td>
-                            <td class="celdas">@item.Materia</td>
-                            <td class="celdas">@item.FechaEntrega.ToShortDateString()</td>
-                            <td class="celdas text-center align-middle">
-                                <form asp-action="Eliminar" asp-route-id="@item.Id" method="post" style="display:inline;">
-                                    <button type="submit" class="btn eliminar">Eliminar</button>
-                                </form>
-                            </td>
+        <div class="tabla-contenedor">
+            @if (Model.Any())
+            {
+                <table class="tabla">
+                    <thead class="encabezado">
+                        <tr class="fuente-titulos">
+                            <th class="celdas-enc" style="color: white;">Descripción</th>
+                            <th class="celdas-enc" style="color: white;">Materia</th>
+                            <th class="celdas-enc" style="color: white;">Fecha de entrega</th>
+                            <th class="celdas-enc" style="color: white;">Eliminar</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-        }
-        else
-        {
-            <p class="fuente-titulos posicion-pantalla text-center">No hay tareas registradas.</p>
-        }
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="fuente-letras">
+                                <td class="celdas">@item.Descripcion</td>
+                                <td class="celdas">@item.Materia</td>
+                                <td class="celdas">@item.FechaEntrega.ToShortDateString()</td>
+                                <td class="celdas text-center align-middle">
+                                    <form asp-action="Eliminar" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                        <button type="submit" class="btn eliminar">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="fuente-titulos posicion-pantalla text-center">No hay tareas registradas.</p>
+            }
+        </div>
     </div>
     <div>
         <a asp-controller="Home" asp-action="Index" class="btn salir">Regresar</a>

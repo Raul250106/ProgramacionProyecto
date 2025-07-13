@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mXiaMX3ArConPBr2/O81Vn5b2DYHZrEnZpEtBwIZNoY=",
+  "Hash": "pw86ZP+VU10gL/LGLB9YAC33tAZ0N8IupMo/ONEB2LM=",
   "Source": "ProyectoFinalPA",
   "BasePath": "_content/ProyectoFinalPA",
   "Mode": "Default",
@@ -122,12 +122,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\clases.jpeg"
     },
     {
-      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDOAZUL.jpg",
       "SourceId": "ProyectoFinalPA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\",
       "BasePath": "_content/ProyectoFinalPA",
-      "RelativePath": "Images/FONDO1#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/FONDOAZUL#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -136,11 +136,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qi5dwyxzbv",
-      "Integrity": "zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=",
+      "Fingerprint": "vzm45xelkx",
+      "Integrity": "a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\FONDO1.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\FONDOAZUL.jpg"
     },
     {
       "Identity": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\images.jpeg",
@@ -1672,8 +1672,8 @@
       ]
     },
     {
-      "Route": "Images/FONDO1.jpg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "Route": "Images/FONDOAZUL.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDOAZUL.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1682,7 +1682,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73800"
+          "Value": "76733"
         },
         {
           "Name": "Content-Type",
@@ -1690,11 +1690,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+          "Value": "\"a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+          "Value": "Sun, 13 Jul 2025 00:48:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1704,13 +1704,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
+          "Value": "sha256-a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s="
         }
       ]
     },
     {
-      "Route": "Images/FONDO1.qi5dwyxzbv.jpg",
-      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDO1.jpg",
+      "Route": "Images/FONDOAZUL.vzm45xelkx.jpg",
+      "AssetFile": "C:\\Users\\raull\\OneDrive\\Escritorio\\ProyectoFinalPA - copia\\wwwroot\\Images\\FONDOAZUL.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1719,7 +1719,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73800"
+          "Value": "76733"
         },
         {
           "Name": "Content-Type",
@@ -1727,11 +1727,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+          "Value": "\"a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+          "Value": "Sun, 13 Jul 2025 00:48:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1741,15 +1741,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qi5dwyxzbv"
+          "Value": "vzm45xelkx"
         },
         {
           "Name": "label",
-          "Value": "Images/FONDO1.jpg"
+          "Value": "Images/FONDOAZUL.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
+          "Value": "sha256-a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s="
         }
       ]
     },

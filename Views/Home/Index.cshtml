@@ -32,34 +32,58 @@
             font-family: 'Georgia', serif; 
             font-size: 1.5rem; 
             font-weight: bold; 
-            color: darkgreen; 
+            color: black; 
         }
         /* Centra botones principales en medio de la pantalla */
         .posicion-botones {
             position: fixed;
-            top: 60%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex; 
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center; 
             width: auto; 
             height: auto; 
         }
         /* Estilo para botones verdes y azules como Clases y Materiales */
-        .boton-verde{
-            width: 500px;
-            background-color: lawngreen;
-            border: 2px solid darkgreen;
-            color: white;
+        .boton{
+            background-color: #FFB300;
+            border: 2px solid #B8860B;
+            color: white;           
+            width: 100%;
+            height: 92px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
         }
-        .boton-azul{
-            width: 500px;
-            background-color: deepskyblue;
-            border: 2px solid darkgreen;
+
+        .cuadro-imagen {
+            border: 2px solid #B8860B;
             color: white;
+            width: 100%;
+            height: 152px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
+
+        .cuadro-personalizado {
+            width: 250px;
+            height: 275px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 15px;
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
         /* Fuente grande y elegante para el texto de botones */
         .fuente {
             font-family: 'Georgia', serif; 
@@ -80,10 +104,22 @@
     }
     <div class="posicion-botones">
         <!-- Botones de navegación hacia los módulos principales del sistema -->
-        <a class="btn boton-verde fuente mb-5" asp-controller="Clases" asp-action="Index">Clases</a>
-        <a class="btn boton-azul fuente mb-5" asp-controller="Tareas" asp-action="Index">Tareas</a>
-        <a class="btn boton-verde fuente mb-5" asp-controller="Materiales" asp-action="Index">Materiales</a>
-        <a class="btn boton-azul fuente mb-5" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+        <div class="cuadro-personalizado ms-5">
+            <div class="cuadro-imagen" style="background-image: url('/Images/clases.jpeg');"></div>
+            <a class="btn boton fuente" asp-controller="Clases" asp-action="Index">Clases</a>
+        </div>
+        <div class="cuadro-personalizado ms-5">
+            <div class="cuadro-imagen" style="background-image: url('/Images/images.jpeg');"></div>
+            <a class="btn boton fuente" asp-controller="Tareas" asp-action="Index">Tareas</a>
+        </div>
+        <div class="cuadro-personalizado ms-5">
+            <div class="cuadro-imagen" style="background-image: url('/Images/materiales.jpeg');"></div>
+            <a class="btn boton fuente" asp-controller="Materiales" asp-action="Index">Materiales</a>
+        </div>
+        <div class="cuadro-personalizado ms-5">
+            <div class="cuadro-imagen" style="background-image: url('/Images/tutoria.jpeg');"></div>
+            <a class="btn boton fuente" asp-controller="Tutorias" asp-action="Index">Tutorías</a>
+        </div>
     </div>
 </body>
 </html>

@@ -27,13 +27,14 @@
         }
         /* Botón guardar verde con texto blanco para destacar acción. */
         .btnregistrar {
-            background-color: lawngreen;
+            background-color: #FFB300;
+            border: 2px solid #B8860B;
             color: white;
         }
         /* Contenedor blanco con borde verde y bordes redondeados. */
         .cuadro-personalizado {
             background-color: white; 
-            border: 2px solid darkgreen;
+            border: 2px solid black;
             border-radius: 15px; 
             padding: 18px; 
             font-family: 'Georgia', serif; 
@@ -58,14 +59,14 @@
             font-family: 'Georgia', serif;
             font-size: 2rem; 
             font-weight: bold; 
-            color: darkgreen;
+            color: black;
         }
         /* Estilo para etiquetas y texto importante en verde oscuro. */
         .fuente-letras {
             font-family: 'Georgia', serif;
             font-size: 1rem; 
             font-weight: bold; 
-            color: darkgreen; 
+            color: black;
         }
     </style>
 </head>
@@ -81,24 +82,24 @@
                 <div>
                     <!-- Campo para ingresar el nombre del material con validación -->
                     <label class="fuente-letras">Nombre del Material:</label>
-                    <input asp-for="Nombre" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="Nombre" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
                 <div>
                     <!-- Campo para ingresar el nombre del solicitante con validación -->
                     <label class="fuente-letras">Solicitante:</label>
-                    <input asp-for="Solicitante" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="Solicitante" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="Solicitante" class="text-danger"></span>
                 </div>
                 <div>
                     <!-- Campo para ingresar la fecha de reserva con validación -->
                     <label class="fuente-letras">Fecha de reserva:</label>
-                    <input asp-for="FechaReserva" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="FechaReserva" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="FechaReserva" class="text-danger"></span>
                 </div>
 
                 <!-- Línea divisoria verde para separar secciones del formulario -->
-                <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
+                <div style="height: 2px; background-color: black; margin: 15px 0;"></div>
 
                 <!-- Botón para enviar formulario con estilo llamativo -->
                 <button type="submit" class="btn w-100 btnregistrar">Guardar</button>

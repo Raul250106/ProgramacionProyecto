@@ -27,13 +27,14 @@
         }
         /* Estilo verde para el botón que registra al usuario */
         .btnregistrar {
-            background-color: lawngreen; 
+            background-color: #FFB300;
+            border: 2px solid #B8860B;
             color: white;
         }
         /* Caja blanca centrada con bordes verdes y estilo elegante */
         .cuadro-personalizado {
             background-color: white;
-            border: 2px solid darkgreen; 
+            border: 2px solid black;
             border-radius: 15px; 
             padding: 18px; 
             font-family: 'Georgia', serif; 
@@ -58,14 +59,14 @@
             font-family: 'Georgia', serif; 
             font-size: 2rem; 
             font-weight: bold; 
-            color: darkgreen; 
+            color: black;
         }
         /* Fuente verde elegante usada en etiquetas del formulario */
         .fuente-letras {
             font-family: 'Georgia', serif; 
             font-size: 1rem;
             font-weight: bold;
-            color: darkgreen;
+            color: black;
         }
     </style>
 </head>
@@ -81,19 +82,19 @@
                 <div class="form-group mb-1">
                     <!-- Campo para ingresar nombre, con validación de errores -->
                     <label asp-for="Nombre" class="fuente-letras"></label>
-                    <input asp-for="Nombre" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="Nombre" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-1">
                     <!-- Campo para ingresar correo electrónico y validación visual -->
                     <label asp-for="Correo" class="fuente-letras"></label>
-                    <input asp-for="Correo" class="form-control" style="border: 2px solid darkgreen; color: black;" />
+                    <input asp-for="Correo" class="form-control" style="border: 2px solid black; color: black;" />
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-1">
                     <!-- Selección de rol del usuario: Docente o Estudiante -->
                     <label asp-for="Rol" class="fuente-letras"></label>
-                    <select asp-for="Rol" class="form-control" style="border: 2px solid darkgreen; color: black;">
+                    <select asp-for="Rol" class="form-control" style="border: 2px solid black; color: black;">
                         <option>Docente</option>
                         <option>Estudiante</option>
                     </select>
@@ -102,12 +103,12 @@
                 <div class="form-group mb-1">
                     <!-- Campo para ingresar la contraseña del usuario, con estilo -->
                     <label asp-for="Contrasena" class="fuente-letras"></label>
-                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid darkgreen; color: black;" type="password" />
+                    <input asp-for="Contrasena" class="form-control" style="border: 2px solid black; color: black;" type="password" />
                     <span asp-validation-for="Contrasena" class="text-danger"></span>
                 </div>
 
                 <!-- Línea divisoria verde entre los campos y el botón -->
-                <div style="height: 2px; background-color: darkgreen; margin: 15px 0;"></div>
+                <div style="height: 2px; background-color: black; margin: 15px 0;"></div>
 
                 <!-- Botón verde para enviar formulario y registrar usuario -->
                 <button type="submit" class="btn w-100 btnregistrar">Registrarse</button>

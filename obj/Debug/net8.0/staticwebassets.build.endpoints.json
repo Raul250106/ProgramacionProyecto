@@ -3,8 +3,8 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "Images/FONDO1.jpg",
-      "AssetFile": "Images/FONDO1.jpg",
+      "Route": "Images/FONDOAZUL.jpg",
+      "AssetFile": "Images/FONDOAZUL.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73800"
+          "Value": "76733"
         },
         {
           "Name": "Content-Type",
@@ -25,23 +25,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+          "Value": "\"a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+          "Value": "Sun, 13 Jul 2025 00:48:44 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
+          "Value": "sha256-a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s="
         }
       ]
     },
     {
-      "Route": "Images/FONDO1.qi5dwyxzbv.jpg",
-      "AssetFile": "Images/FONDO1.jpg",
+      "Route": "Images/FONDOAZUL.vzm45xelkx.jpg",
+      "AssetFile": "Images/FONDOAZUL.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -54,7 +54,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73800"
+          "Value": "76733"
         },
         {
           "Name": "Content-Type",
@@ -62,25 +62,25 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs=\""
+          "Value": "\"a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Jul 2025 23:36:46 GMT"
+          "Value": "Sun, 13 Jul 2025 00:48:44 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qi5dwyxzbv"
+          "Value": "vzm45xelkx"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zurNHBRCFJPYhUIqSdt+KPEnvJmJm2ti5wAMdLvugMs="
+          "Value": "sha256-a7aIrDlULupR86dFd0NNxD9gIxwpG12QPia+EX0mm8s="
         },
         {
           "Name": "label",
-          "Value": "Images/FONDO1.jpg"
+          "Value": "Images/FONDOAZUL.jpg"
         }
       ]
     },
